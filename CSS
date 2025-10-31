@@ -1,0 +1,171 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #f4f4f9; /* Fundo leve para contraste */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* CORES PERSONALIZADAS */
+:root {
+    --primary-color: #007bff; /* Azul primário (similar ao design) */
+    --secondary-color: #0056b3; /* Azul escuro */
+    --dark-bg: #1e1e2d; /* Fundo escuro para cabeçalho */
+    --light-text: #ffffff;
+}
+
+/* CABEÇALHO E NAVEGAÇÃO */
+.main-header {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; /* Menu fixo no topo */
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu li a {
+    color: var(--light-text);
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.nav-menu li a:hover {
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+}
+
+/* ESTILO DAS SEÇÕES */
+.page-section {
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.page-section h2 {
+    font-size: 2.2em;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+/* ESTILO DA SEÇÃO HOME (HERO) */
+.hero {
+    background-color: #e9ecef;
+    padding: 100px 5%;
+}
+
+.hero .destaque {
+    font-style: italic;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* ESTILO DAS ÁREAS DE ATUAÇÃO */
+.areas {
+    background-color: var(--light-text);
+}
+
+.areas .area-item {
+    background-color: #f4f4f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.areas .area-item h3 {
+    color: var(--dark-bg);
+    margin-bottom: 10px;
+}
+
+/* ESTILO DA SEÇÃO ODS 9 */
+.ods9-section {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+}
+
+.ods9-section h2 {
+    color: #4CAF50; /* Um toque de verde para sustentabilidade */
+}
+
+/* ESTILO DAS DICAS E TENDÊNCIAS */
+.dicas-section {
+    background-color: var(--e9ecef);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.dica-card {
+    background-color: var(--light-text);
+    width: 30%; /* Três cards por linha em desktop */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--primary-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* RODAPÉ E CONTATOS */
+.main-footer {
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+    padding: 20px 5%;
+    text-align: center;
+}
+
+.social-links a {
+    color: var(--light-text);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ffc107; /* Amarelo de destaque */
+}
+
+/* RESPONSIVIDADE (para dispositivos móveis) */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav-menu li a {
+        padding: 10px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .dica-card {
+        width: 100%; /* Uma coluna em dispositivos móveis */
+    }
+}
